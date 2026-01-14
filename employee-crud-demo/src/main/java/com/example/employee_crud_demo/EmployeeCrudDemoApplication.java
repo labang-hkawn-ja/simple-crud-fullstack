@@ -23,8 +23,7 @@ public class EmployeeCrudDemoApplication {
 			employeeDao.saveAll(List.of(
 					new Employee("Telusko", "telusko@gmail.com", "Software Development", 3000.0, LocalDate.now()),
 					new Employee("Simple Dev", "simple@dev.com", "Frontend Development", 2500.0, LocalDate.now()),
-					new Employee("Merry James", "merry@james.com", "Sale Department", 200, LocalDate.now())
-			));
+					new Employee("Merry James", "merry@james.com", "Sale Department", 200, LocalDate.now())));
 		};
 	}
 

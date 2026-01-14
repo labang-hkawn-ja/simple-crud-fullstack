@@ -8,7 +8,8 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
-@Getter @Setter
+@Getter
+@Setter
 @NoArgsConstructor
 public class Employee {
 
@@ -21,7 +22,7 @@ public class Employee {
 	private String department;
 	private double salary;
 	private LocalDate createdAt;
-	
+
 	public Employee(String name, String email, String department, double salary, LocalDate createdAt) {
 		super();
 		this.name = name;
@@ -30,6 +31,5 @@ public class Employee {
 		this.salary = salary;
 		this.createdAt = createdAt;
 	}
-	
-	
+
 }

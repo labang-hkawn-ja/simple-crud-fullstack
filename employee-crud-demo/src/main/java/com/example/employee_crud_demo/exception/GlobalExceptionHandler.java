@@ -8,16 +8,15 @@ import java.time.LocalDateTime;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-	
+
 	@ExceptionHandler(UserNotFoundException.class)
 	public RespMessage userNotFoundHandler(UserNotFoundException ex) {
 		return new RespMessage(HttpStatus.NOT_FOUND.toString(), ex.getMessage(), LocalDateTime.now());
 	}
-	
+
 	@ExceptionHandler(UserAlreadyExistException.class)
 	public RespMessage userNotFoundHandler(UserAlreadyExistException ex) {
 		return new RespMessage(HttpStatus.BAD_REQUEST.toString(), ex.getMessage(), LocalDateTime.now());
 	}
 
 }
-
