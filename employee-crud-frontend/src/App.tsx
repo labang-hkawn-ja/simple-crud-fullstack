@@ -1,7 +1,13 @@
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./page/HomePage";
+import EmployeeFormPage from "./page/EmployeeFormPage";
+
 export default function App() {
   return (
-    <div>
-      <h1 className="text-success">Employee CRUD</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/employee-form" element={<EmployeeFormPage />} />
+      <Route path="/employee-update-form/:id" element={<EmployeeFormPage />} />
+    </Routes>
   );
 }
